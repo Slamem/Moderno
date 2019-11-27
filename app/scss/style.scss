@@ -61,13 +61,13 @@
         &-title {
             margin-bottom: 10px;
             font-size: 48px;
-            font-weight: 700;
+            @include f700;
             line-height: 70px;
         }
         &-text {
             margin-bottom: 50px;
             font-size: 20px;
-            font-weight: 500;
+            @include f500;
             line-height: 30px;
         }
         &-form {
@@ -85,7 +85,7 @@
                 outline: none;
                 font-size: 14px;
                 &::placeholder {
-                    font-weight: 500;
+                    @include f500;
                     color: #97aab3;
                 } 
             }
@@ -151,7 +151,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e7ecf2;
-            font-weight: 500;
+            @include f500;
         }
         &-name{
             max-width: 310px;
@@ -159,7 +159,7 @@
         &-title{
             display: block;
             font-size: 18px;
-            font-weight: 500;
+            @include f500;
             color: $bg;
         }
         &-category{ 
@@ -169,7 +169,7 @@
         }
         &-price{
             font-size: 20px;
-            font-weight: 700;
+            @include f700;
             color: $bg;
         }
         &-info {
@@ -182,6 +182,7 @@
         &-author{
             display: flex;
             align-items: center;
+            max-width: 245px;
             .avatar {
                 width: 30px;
                 height: 30px;
@@ -194,7 +195,13 @@
             }
             span {
                 font-size: 14px;
-                font-weight: 500;
+                @include f500;
+            }
+        }
+        &-star{
+            font-size: 12px;
+            span{
+                color: $bg;
             }
         }
     }
@@ -220,5 +227,124 @@
         }
     }
 }
+
+.product-slider {
+    padding: 110px 0 120px;
+    .slick-dots{
+        margin-top: 50px;
+        text-align: center;
+        li{
+            display: inline-block;
+            margin: 0 3px; 
+            &.slick-active{
+                button{
+                    background-color: $green;
+                }
+            }
+            button{
+                border-radius: 50%;
+                background-color: rgb(232, 232, 232);
+                border: none;
+                outline: none;
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.advantages {
+    padding: 110px 0;
+    background-color: $bg;
+    // .advantages__title
+    &__title {
+        color: #fff;
+        margin-bottom: 85px;
+    }
+    // .advantages__inner
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    // .advantages__item
+    &__item {
+        max-width: 370px;
+        padding: 0 15px;
+        text-align: center;
+        &:hover{
+            .advantages__item-img{
+                background-color: $green;
+                &{
+                    fill: #fff;
+                }
+            }
+            .advantages__item-title{
+                color: $green;
+            }
+        }
+        &-img{
+            width: 114px;
+            height: 114px;
+            margin: 0 auto 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s;
+        }
+        &-title{
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #fff;
+            @include f500; 
+            transition: all .5s;
+        }
+        &-text{
+            font-size: 15px;
+        }
+    }
+}
+.icosvg{
+    svg{
+        width: 50px;
+    }
+}
+.author {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        max-width: 620px;
+        width: 100%;
+        min-height: 215px;
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        max-width: 261px;
+        margin-right: 45px;
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        span{
+            @include f500;
+        }
+    }
+    &__link {
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+
 
 @import "media";
