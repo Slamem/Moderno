@@ -199,6 +199,8 @@
             }
         }
         &-star{
+            display: flex;
+            align-items: center;
             font-size: 12px;
             span{
                 color: $bg;
@@ -345,6 +347,189 @@
         background-color: #fff;
     }
 }
+.tutorial {
+    padding: 70px 0 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        &-images{
+            min-height: 270px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        &-title{
+            padding: 30px 10px;
+            background-color: #f8f8f8;
+            font-size: 24px;
+            text-align: center;
+            @include f700;
+            color: $bg;
+            text-align: center;
+        }
+    }
+}
 
+.footer {
+    background-color: $bg;
+    &__content {
+        padding: 100px 0 80px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col {
+        max-width: 270px;
+        &-menu{
+            max-width: 220px;
+        }
+        &-title{
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            font-size: 22px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            color: #fff;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 51px;
+                height: 3px;
+                bottom: 0;
+                left: 2px;
+                background-color: $green;
+            }
+        }
+        &-text{
+            margin-bottom: 30px;
+            color: #b7c3c8;
+            
+        }
+        &-list{
+            a{
+                margin-bottom: 13px;
+                padding-left: 22px;
+                position: relative;
+                color: #b7c3c8;
+                &::before{
+                    content: '\f105';
+                    position: absolute;
+                    left: 0;
+                    font-size: 18px;
+                    font-family: 'icomoon';
+                    color: $green;
+                }
+            }
+        }
+    }
+    &__info {
+        position: relative;
+        margin-top: 18px;
+        padding-left: 30px;
+        @include f500;
+        color: #fff;
+        &::before{
+            content: '\f041';
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            font-family: 'icomoon';
+            color: $green;
+        }
+        &-phone{
+            &::before{
+                content: '\f095';
+            }
+        }
+    }
+    &__social-links {
+        margin-bottom: 33px;
+        li{
+            display: inline-block;
+            &+li{
+                margin-left: 7px;
+            }
+            a{
+                width: 28px;
+                height: 28px;
+                background-image: url(../images/socials.png);                
+            }
+            .link-facebook {
+                background-position: 0 0;
+            }
+            .link-twitter {
+                background-position: -31px -31px;
+            }
+            .link-youtube {
+                background-position: -61px -1px;
+            }
+            .link-pinterest {
+                background-position: -31px -1px;
+            }
+            .link-linkedin {
+                background-position: -1px -31px;
+            }
+            
+        }
+    }
+    &__form {
+        position: relative;
+        &-title{
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #fff;
+        }
+        input{
+            height: 40px;
+            padding-left: 13px;
+            padding-right: 50px;
+            background-color: #2f3c43;
+            display: block;
+            width: 100%;
+            color: #fff;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            &::placeholder{
+                color: #697378;
+            }
+        }
+        button{
+            position: absolute;
+            height: 40px;
+            width: 43px;
+            bottom: 0;
+            right: 0;
+            background-color: $green;
+            border: none;
+            cursor: pointer;
+            &::before{
+                content: '\f124';
+                position: absolute;
+                top: 9px;
+                left: 13px;
+                font-size: 20px;
+                font-family: 'icomoon';
+                color: #fff;
+            }
+        }
+    }
+    &__copy {
+        border: 1px solid #424d53;
+        &-text {
+            padding: 25px 0;
+            font-size: 15px;
+            color: #919699;
+            text-align: center;
+        }
+    }
+}
 
 @import "media";

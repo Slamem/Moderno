@@ -37,7 +37,7 @@ body {
     }
 }
 .title {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-size: 36px;
     @include f700;
     color: $bg;
@@ -45,7 +45,8 @@ body {
     text-align: center;
 }
 .rate-star{
-    display: inline-block !important;
+    display: inline-block;
     margin-right: 13px;
+    margin-bottom: 2px;
 }
 
